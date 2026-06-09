@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121214;
+}
+
+.calculator {
+    width: 320px;
+    background-color: #202024;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Visor */
+.display {
+    background-color: #121214;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 20px;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#previous-operand {
+    color: #7c7c8a;
+    font-size: 1.1rem;
+}
+
+#current-operand {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* Botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 18px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #29292e;
+    color: #e1e1e6;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #323238;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Botões Especiais */
+.btn.operator {
+    color: #00b37e;
+    font-weight: bold;
+}
+
+.btn.clear {
+    color: #f75a68;
+    font-weight: bold;
+}
+
+.btn.equal {
+    background-color: #00875f;
+    color: #ffffff;
+    grid-row: span 2;
+    height: 100%;
+}
+
+.btn.equal:hover {
+    background-color: #00b37e;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
